@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-gum=0#gsw!@zif#eh88(a2^ehazjij6vivq3#rgp6idrk!4@4n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mymarketplace-362acc4253b6.herokuapp.com', 'mykmarketplace.com']
 
 
 # Application definition
@@ -198,3 +198,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if os.getcwd() == '/app':
+    DEBUG = False
