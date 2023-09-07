@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'storages'
 ]
 
 REST_FRAMEWORK = {
@@ -184,8 +185,8 @@ EMAIL_HOST_PASSWORD = 'nlbhjqpxbuaeocet'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = ''
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
@@ -198,6 +199,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#AWS_QUERYSTRING_AUTH = False
+#AWS_S3_FILE_OVERWRITE = False
+
+
+#AWS_ACCESS_KEY_ID = 'AKIAQEMZBWAVTWSQPHWD'
+#AWS_SECRET_ACCESS_KEY= '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'
+#AWS_STORAGE_BUCKET_NAME = 'mymarketplace-bucket'
+
 
 if os.getcwd() == '/app':
     DEBUG = False
