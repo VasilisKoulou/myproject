@@ -12,7 +12,7 @@ class Profile(models.Model):
     location = models.CharField(max_length=200, blank=True, null=True)
     short_intro = models.CharField(max_length=20, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
-    prof_image = models.ImageField(null=True, blank=True, upload_to = 'profiles/', default="profiles/user_default.jpg")
+    prof_image = models.ImageField(null=True, blank=True, upload_to = 'profiles/', default="profiles/user_default.png")
     social_insta = models.CharField(max_length=100, blank=True, null=True)
     social_fb = models.CharField(max_length=100, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
