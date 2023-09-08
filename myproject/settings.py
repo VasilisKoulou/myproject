@@ -13,7 +13,6 @@ from datetime import timedelta
 from pathlib import Path
 import os
 import django_heroku
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +27,7 @@ SECRET_KEY = 'django-insecure-gum=0#gsw!@zif#eh88(a2^ehazjij6vivq3#rgp6idrk!4@4n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mymarketplace-362acc4253b6.herokuapp.com', 'mykmarketplace.com']
 
 
 # Application definition
